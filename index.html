@@ -14,6 +14,7 @@
             display: flex;
             flex-direction: column;
             min-height: 100vh;
+            position: relative;
         }
         header {
             background-color: #2e3a59;
@@ -25,18 +26,16 @@
             margin: 0;
             font-size: 1.2em;
         }
-        .logo-wrapper {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin: 20px auto;
-            max-width: 800px;
-            padding: 0 20px;
+        .logo-fixed {
+            position: absolute;
+            top: 120px;
+            height: 140px;
         }
-        .logo-wrapper img {
-            height: 120px;
-            max-width: 45%;
-            height: auto;
+        .logo-fixed.left {
+            left: 10px;
+        }
+        .logo-fixed.right {
+            right: 10px;
         }
         .main-title {
             font-size: 2.5em;
@@ -90,13 +89,8 @@
             .main-title {
                 font-size: 1.8em;
             }
-            .logo-wrapper {
-                flex-direction: column;
-                align-items: center;
-                gap: 10px;
-            }
-            .logo-wrapper img {
-                max-width: 80%;
+            .logo-fixed {
+                display: none;
             }
             .authors {
                 text-align: center;
@@ -110,10 +104,8 @@
         <h1>THA Augsburg - Informatik - Systems Engineering – Projekt 2</h1>
     </header>
 
-    <div class="logo-wrapper">
-        <img src="ChatGPT%20Image%2022.%20Apr.%202025,%2011_33_25.png" alt="PowerTower Logo">
-        <img src="ChatGPT%20Image%2022.%20Apr.%202025,%2011_33_25.png" alt="PowerTower Logo">
-    </div>
+    <img src="ChatGPT%20Image%2022.%20Apr.%202025,%2011_33_25.png" alt="PowerTower Logo" class="logo-fixed left">
+    <img src="ChatGPT%20Image%2022.%20Apr.%202025,%2011_33_25.png" alt="PowerTower Logo" class="logo-fixed right">
 
     <div class="main-title">Power-Tower</div>
 
