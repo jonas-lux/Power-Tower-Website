@@ -17,13 +17,25 @@
             color: white;
             padding: 20px;
             text-align: center;
+            position: relative;
         }
         header h1 {
             margin: 0;
             font-size: 20px;
         }
+        .logo-left, .logo-right {
+            position: absolute;
+            top: 10px;
+            height: 80px;
+        }
+        .logo-left {
+            left: 10px;
+        }
+        .logo-right {
+            right: 10px;
+        }
         .main-title {
-            font-size: 2em;
+            font-size: 2.8em;
             font-weight: bold;
             text-align: center;
             margin-top: 10px;
@@ -37,8 +49,8 @@
             margin: auto;
         }
         .welcome-text {
-            font-size: 1.4em;
-            font-weight: bold;
+            font-size: 1.1em;
+            font-weight: normal;
             margin-bottom: 30px;
         }
         h2, h3 {
@@ -68,6 +80,8 @@
 </head>
 <body>
     <header>
+        <img src="powertower-logo.png" alt="PowerTower Logo" class="logo-left">
+        <img src="powertower-logo.png" alt="PowerTower Logo" class="logo-right">
         <h1>THA Augsburg - Informatik - Systems Engineering – Projekt 2</h1>
     </header>
     <div class="main-title">Power-Tower</div>
