@@ -18,12 +18,30 @@
             padding: 20px;
             text-align: center;
         }
+        header h1 {
+            margin: 0;
+            font-size: 20px;
+        }
+        .main-title {
+            font-size: 2em;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 10px;
+            margin-bottom: 30px;
+            text-decoration: underline;
+            color: #2e3a59;
+        }
         main {
             padding: 20px;
             max-width: 800px;
             margin: auto;
         }
-        h1, h2 {
+        .welcome-text {
+            font-size: 1.4em;
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+        h2, h3 {
             color: #2e3a59;
         }
         .pdf-list {
@@ -50,28 +68,25 @@
 </head>
 <body>
     <header>
-        <h1>Power-Tower</h1>
-        <p>Unterrichtsmaterialien für den Lehrkoffer "Power-Tower"</p>
+        <h1>THA Augsburg - Informatik - Systems Engineering – Projekt 2</h1>
     </header>
+    <div class="main-title">Power-Tower</div>
     <main>
-        <section>
-            <h2>Projektbeschreibung</h2>
-            <p>
-                Willkommen auf der Website <strong>Power-Tower</strong> – ein Lehrkoffer für den Elektrizitätsunterricht in der 8. Jahrgangsstufe am Gymnasium in Bayern.
-                Entstanden im Rahmen des SE Projekt 2 an der THA Augsburg, Studiengang Systems Engineering.
-            </p>
+        <section class="welcome-text">
+            Willkommen auf der Website <strong>PowerTower</strong> – ein Lehrkoffer für den Elektrizitätsunterricht
+            in der 8. Jahrgangsstufe am Gymnasium in Bayern. Entstanden im Rahmen des SE Projekt 2 an der
+            THA Augsburg, Studiengang Systems Engineering.
         </section>
 
         <section class="pdf-list">
             <h2>Materialien für die Lehrer</h2>
-                <p>
-                  <a href="https://jonas-lux.github.io/Power-Tower-Website/Test%20Jonas%20Website.pdf" target="_blank">
+            <p>
+                <a href="https://jonas-lux.github.io/Power-Tower-Website/Test%20Jonas%20Website.pdf" target="_blank">
                     Test Jonas – PDF
-                  </a>
-                </p>
+                </a>
+            </p>
 
             <h3>Materialien für die THA</h3>
-                
         </section>
     </main>
 </body>
