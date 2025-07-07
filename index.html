@@ -11,7 +11,8 @@
             margin: 0;
             padding: 0;
             line-height: 1.6;
-            position: relative;
+            display: flex;
+            flex-direction: column;
             min-height: 100vh;
         }
         header {
@@ -22,36 +23,38 @@
         }
         header h1 {
             margin: 0;
-            font-size: 20px;
+            font-size: 1.2em;
         }
-        .logo-left, .logo-right {
-            position: absolute;
-            top: 150px;
-            height: 160px;
+        .logo-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 20px auto;
+            max-width: 800px;
+            padding: 0 20px;
         }
-        .logo-left {
-            left: 30px;
-        }
-        .logo-right {
-            right: 30px;
+        .logo-wrapper img {
+            height: 120px;
+            max-width: 45%;
+            height: auto;
         }
         .main-title {
-            font-size: 2.8em;
+            font-size: 2.5em;
             font-weight: bold;
             text-align: center;
-            margin-top: 10px;
-            margin-bottom: 30px;
+            margin: 10px 20px 30px;
             text-decoration: underline;
             color: #2e3a59;
         }
         main {
+            flex: 1;
             padding: 20px;
             max-width: 800px;
             margin: auto;
+            width: 100%;
         }
         .welcome-text {
             font-size: 1em;
-            font-weight: normal;
             margin-bottom: 30px;
         }
         h2, h3 {
@@ -78,12 +81,27 @@
             text-decoration: underline;
         }
         .authors {
-            position: absolute;
-            bottom: 20px;
-            right: 30px;
-            font-size: 1.4em;
+            font-size: 1.2em;
             color: #444;
             text-align: right;
+            padding: 20px;
+        }
+        @media (max-width: 600px) {
+            .main-title {
+                font-size: 1.8em;
+            }
+            .logo-wrapper {
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+            }
+            .logo-wrapper img {
+                max-width: 80%;
+            }
+            .authors {
+                text-align: center;
+                font-size: 1em;
+            }
         }
     </style>
 </head>
@@ -91,9 +109,14 @@
     <header>
         <h1>THA Augsburg - Informatik - Systems Engineering – Projekt 2</h1>
     </header>
-    <img src="ChatGPT%20Image%2022.%20Apr.%202025,%2011_33_25.png" alt="PowerTower Logo" class="logo-left">
-    <img src="ChatGPT%20Image%2022.%20Apr.%202025,%2011_33_25.png" alt="PowerTower Logo" class="logo-right">
+
+    <div class="logo-wrapper">
+        <img src="ChatGPT%20Image%2022.%20Apr.%202025,%2011_33_25.png" alt="PowerTower Logo">
+        <img src="ChatGPT%20Image%2022.%20Apr.%202025,%2011_33_25.png" alt="PowerTower Logo">
+    </div>
+
     <div class="main-title">Power-Tower</div>
+
     <main>
         <section class="welcome-text">
             Willkommen auf der Website <strong>PowerTower</strong> – ein Lehrkoffer für den Elektrizitätsunterricht
@@ -112,6 +135,7 @@
             <h3>Materialien für die THA</h3>
         </section>
     </main>
+
     <div class="authors">
         Jonas Lux<br>
         Ferdinand Dürnhöfer<br>
